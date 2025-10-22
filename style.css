@@ -1,4 +1,23 @@
-/* Animasi fade-in saat scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -10,8 +29,8 @@
     transform: translateY(0);
 }
 
-/* Menjaga performa paralaks */
-.parallax-element {
+.parallax-element,
+#visit-bg-parallax {
     will-change: transform;
 }
 
@@ -26,4 +45,32 @@
     transform: translateY(0);
     opacity: 1;
     pointer-events: auto;
+}
+
+#beach-img.fade-out {
+    opacity: 0;
+}
+
+#beach-img.fade-in {
+    opacity: 1;
+}
+
+.search-modal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+}
+
+.search-modal.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-modal > div:last-child {
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-out;
+}
+
+.search-modal.is-visible > div:last-child {
+    transform: translateY(0);
 }
