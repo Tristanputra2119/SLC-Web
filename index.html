@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bali Island Travel</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="bg-gray-50">
+
+        <div class="max-w-7xl mx-auto p-4 md:p-8 space-y-8">
+
+            <!-- Navbar dengan hamburger menu -->
+            <header class="bg-white rounded-2xl px-6 py-4 shadow-sm sticky top-4 z-50 animate-on-scroll">
+                <div class="flex items-center justify-between">
+                    <!-- Hamburger button -->
+                    <button id="menu-toggle"
+                        class="flex items-center gap-2 cursor-pointer md:hidden focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12" />
+                            <line x1="4" x2="20" y1="6" y2="6" />
+                            <line x1="4" x2="20" y1="18" y2="18" />
+                        </svg>
+                        <span class="font-medium">Menu</span>
+                    </button>
+
+                    <!-- Desktop nav -->
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a href="#about" class="text-gray-700 hover:text-gray-900 transition">About</a>
+                        <a href="#pricing" class="text-gray-700 hover:text-gray-900 transition">Pricing</a>
+                        <a href="#contact" class="text-gray-700 hover:text-gray-900 transition">Contact</a>
+                    </nav>
+
+                    <div class="flex items-center gap-4">
+                        <div class="hidden md:flex items-center gap-2 text-gray-600 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" x2="16.65" y1="21" y2="16.65" />
+                            </svg>
+                            <span>Search</span>
+                        </div>
+                        <button class="bg-black text-white rounded-full px-6 py-2.5 hover:bg-gray-800 transition">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+                <!-- Mobile nav -->
+                <nav id="mobile-nav"
+                    class="md:hidden flex flex-col gap-4 mt-4 bg-white rounded-xl shadow-lg p-4 absolute left-0 right-0 top-full z-40 transition-all duration-300 opacity-0 pointer-events-none">
+                    <a href="#about" class="text-gray-700 hover:text-gray-900 transition">About</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-gray-900 transition">Pricing</a>
+                    <a href="#contact" class="text-gray-700 hover:text-gray-900 transition">Contact</a>
+                </nav>
+            </header>
+
+            <section
+                class="relative bg-gradient-to-br from-blue-400 via-blue-300 to-cyan-200 rounded-3xl overflow-hidden shadow-lg min-h-[600px] flex items-center">
+                <div class="relative z-10 px-8 md:px-12 lg:px-16 py-16 md:py-20 animate-on-scroll">
+                    <div class="max-w-xl">
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl text-white mb-6 font-serif">
+                            Bali Island
+                        </h1>
+                        <p class="text-white/90 text-lg mb-8 leading-relaxed">
+                            Discover the enchantment of Indonesia's most celebrated island.
+                            Bali captivates with its ancient temples, lush rice terraces,
+                            pristine beaches, and vibrant culture. This stunning island paradise
+                            offers unforgettable experiences for every traveler.
+                        </p>
+                        <button
+                            class="bg-black text-white rounded-full px-8 py-4 text-lg hover:bg-gray-800 transition transform hover:scale-105">
+                            Let's Go
+                        </button>
+                    </div>
+                </div>
+
+                <div class="absolute inset-0 pointer-events-none">
+                    <svg class="absolute right-0 top-0 h-full w-full opacity-10" viewBox="0 0 500 500" fill="none">
+                        <circle cx="400" cy="250" r="350" stroke="white" stroke-width="2" />
+                        <circle cx="400" cy="250" r="280" stroke="white" stroke-width="2" />
+                        <circle cx="400" cy="250" r="210" stroke="white" stroke-width="2" />
+                    </svg>
+                </div>
+
+                <div id="hero-image-parallax" class="absolute bottom-50 left-0 w-full parallax-element">
+                    <img src="https://images.unsplash.com/photo-1752153417227-c4633b2209f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdGVtcGxlJTIwYmVhY2h8ZW58MXx8fHwxNzYxMTM0MzQzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                        alt="Bali Beach" class="w-full h-full object-cover object-center" />
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl p-8 shadow-lg">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="group cursor-pointer animate-on-scroll">
+                        <div class="relative aspect-square rounded-2xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1729673767346-b9970ff56599?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVYnVkJTIwcmljZSUyMHRlcnJhY2VzfGVufDF8fHx8MTc2MTEzNDM0NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                alt="Ubud"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <h3 class="text-xl mb-2 font-medium">Ubud</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Experience authentic Balinese culture amid emerald rice terraces and sacred monkey forests.
+                        </p>
+                    </div>
+                    <div class="group cursor-pointer animate-on-scroll" style="transition-delay: 100ms;">
+                        <div class="relative aspect-square rounded-2xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1672153919629-a9fc42869e58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxOdXNhJTIwUGVuaWRhJTIwYmVhY2h8ZW58MXx8fHwxNzYxMTM0MzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                alt="Nusa Penida"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <h3 class="text-xl mb-2 font-medium">Nusa Penida</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            An untouched paradise with dramatic cliffs and crystal-clear turquoise waters.
+                        </p>
+                    </div>
+                    <div class="group cursor-pointer animate-on-scroll" style="transition-delay: 200ms;">
+                        <div class="relative aspect-square rounded-2xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1604842937136-1648761a6256?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVbHV3YXR1JTIwdGVtcGxlJTIwQmFsaXxlbnwxfHx8fDE3NjExMzQzNDV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                alt="Uluwatu"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <h3 class="text-xl mb-2 font-medium">Uluwatu</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Magnificent clifftop temple overlooking the Indian Ocean with spectacular sunset views.
+                        </p>
+                    </div>
+                    <div class="group cursor-pointer animate-on-scroll" style="transition-delay: 300ms;">
+                        <div class="relative aspect-square rounded-2xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1717501787981-d5f28eb2df5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTZW1pbnlhayUyMGJlYWNoJTIwQmFsaXxlbnwxfHx8fDE3NjExMzQzNDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                alt="Seminyak"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        </div>
+                        <h3 class="text-xl mb-2 font-medium">Seminyak</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Upscale beach resort area featuring world-class dining and vibrant nightlife scene.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl p-8 md:p-12 shadow-lg animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl mb-8 font-serif">
+                    Discover your destination
+                </h2>
+
+                <p class="text-gray-600 mb-8 max-w-2xl">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mb-12">
+                    <button class="px-6 py-3 rounded-full transition bg-black text-white">
+                        Standard Plan
+                    </button>
+                    <button class="px-6 py-3 rounded-full transition bg-gray-100 text-gray-700 hover:bg-gray-200">
+                        Family Plan
+                    </button>
+                    <button class="px-6 py-3 rounded-full transition bg-gray-100 text-gray-700 hover:bg-gray-200">
+                        Premium Plan
+                    </button>
+                    <button class="px-6 py-3 rounded-full transition bg-gray-100 text-gray-700 hover:bg-gray-200">
+                        VIP Plan
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1604842937136-1648761a6256?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVbHV3YXR1JTIwdGVtcGxlJTIwQmFsaXxlbnwxfHx8fDE3NjExMzQzNDV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                            alt="Uluwatu Temple"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden animate-on-scroll"
+                        style="transition-delay: 100ms;">
+                        <img src="https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwd2F0ZXJmYWxsfGVufDF8fHx8MTc2MTEzNDM0NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                            alt="Bali Waterfall"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden animate-on-scroll"
+                        style="transition-delay: 200ms;">
+                        <img src="https://images.unsplash.com/photo-1755077005329-13ce030aa794?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwdHJhZGl0aW9uYWwlMjBkYW5jZXxlbnwxfHx8fDE3NjExMzQzNDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                            alt="Traditional Dance"
+                            class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-12 shadow-lg overflow-hidden animate-on-scroll">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-on-scroll">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl mb-6 font-serif">
+                            The best price for this destination
+                        </h2>
+                        <button
+                            class="bg-black text-white rounded-full px-8 py-4 text-lg hover:bg-gray-800 transition transform hover:scale-105">
+                            Best Offer
+                        </button>
+                    </div>
+
+                    <div class="relative animate-on-scroll" style="transition-delay: 100ms;">
+                        <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1592237036346-a2854e60872d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwc3VyZmluZyUyMGJlYWNofGVufDF8fHx8MTc2MTEzNDM1MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                alt="Bali Beach Activity" class="w-full h-full object-cover" />
+                        </div>
+
+                        <div
+                            class="absolute -left-8 top-1/2 -translate-y-1/2 w-48 h-56 rounded-3xl overflow-hidden shadow-xl z-20 hidden md:block">
+                            <img src="https://images.unsplash.com/photo-1642868504628-7886ebd6f17d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwb2NlYW4lMjBibHVlfGVufDF8fHx8MTc2MTEzNDM0Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                alt="Ocean Activity" class="w-full h-full object-cover" />
+                        </div>
+
+                        <div
+                            class="absolute -bottom-4 -right-4 w-32 h-40 rounded-3xl overflow-hidden shadow-xl z-20 hidden lg:block">
+                            <img src="https://images.unsplash.com/photo-1729673767346-b9970ff56599?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVYnVkJTIwcmljZSUyMHRlcnJhY2VzfGVufDF8fHx8MTc2MTEzNDM0NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                alt="Rice Terraces" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visit Bali Island section -->
+            <section id="visit-section"
+                class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl overflow-hidden shadow-lg min-h-[600px] flex items-center justify-center px-2 md:px-8">
+                <div class="absolute inset-0 opacity-20">
+                    <img src="https://images.unsplash.com/photo-1592237036346-a2854e60872d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwc3VyZmluZyUyMGJlYWNofGVufDF8fHx8MTc2MTEzNDM1MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                        alt="Background" class="w-full h-full object-cover" />
+                </div>
+
+                <div
+                    class="relative z-10 flex flex-col items-center justify-center text-center px-4 py-12 md:px-8 md:py-16 min-h-[400px] md:min-h-[600px] w-full max-w-2xl mx-auto bg-black/40 rounded-2xl md:bg-transparent">
+                    <h2 class="text-3xl md:text-5xl text-white mb-4 font-serif animate-on-scroll">
+                        Visit Bali Island with us
+                    </h2>
+                    <p class="text-white/80 max-w-2xl mb-8 text-base md:text-lg animate-on-scroll"
+                        style="transition-delay: 100ms;">
+                        Let's explore and experience the beauty of Bali's famous destinations.
+                        Immerse yourself in island paradise, stunning beaches, and vibrant culture with our tours.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-4 animate-on-scroll" style="transition-delay: 200ms;">
+                        <button
+                            class="bg-white text-black rounded-full px-8 py-4 text-lg hover:bg-gray-100 transition transform hover:scale-105">
+                            Let's Go
+                        </button>
+                        <button
+                            class="border border-white text-white rounded-full px-8 py-4 text-lg hover:bg-white/10 transition">
+                            DEMO
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl p-8 md:p-12 shadow-lg animate-on-scroll">
+                <div class="flex flex-col md:flex-row justify-between items-start mb-8">
+                    <div class="animate-on-scroll">
+                        <p class="text-sm text-gray-500 mb-2">The Holy Temple</p>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl max-w-md font-serif">
+                            The Unmatched Beauty of the Island
+                        </h2>
+                    </div>
+                    <div class="hidden md:block max-w-md mt-4 md:mt-0 animate-on-scroll"
+                        style="transition-delay: 100ms;">
+                        <p class="text-gray-600 leading-relaxed">
+                            Bali Island with its unparalleled natural beauty,
+                            rich cultural heritage, and spiritual atmosphere
+                            captivates visitors with its awesome natural wonders
+                            and incredible underwater world.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+                    <div
+                        class="bg-black rounded-3xl p-6 text-white relative overflow-hidden h-[350px] animate-on-scroll">
+                        <div class="absolute inset-0 opacity-20">
+                            <img src="https://images.unsplash.com/photo-1729673767346-b9970ff56599?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVYnVkJTIwcmljZSUyMHRlcnJhY2VzfGVufDF8fHx8MTc2MTEzNDM0NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                alt="Ubud" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="relative z-10 h-full flex flex-col">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                                <div class="w-6 h-6 bg-cyan-400 rounded-full"></div>
+                            </div>
+                            <div class="mt-auto">
+                                <h3 class="text-2xl mb-2 font-medium">Ubud Rice Terraces</h3>
+                                <p class="text-sm text-white/70">Sacred rice location</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-3xl overflow-hidden h-[480px] relative animate-on-scroll"
+                        style="transition-delay: 100ms;">
+                        <img src="https://images.unsplash.com/photo-1618519370613-788d5baab49e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYWxpJTIwYmVhY2glMjBhZXJpYWx8ZW58MXx8fHwxNzYxMTM0MzQ1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                            alt="Bali Beach" class="w-full h-full object-cover" />
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 text-white">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="flex items-center bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="currentColor" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="text-cyan-400">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                    </svg>
+                                    <span class="text-xs ml-1">32% NEW</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-amber-100 to-orange-50 rounded-3xl p-6 flex flex-col justify-between h-[300px] animate-on-scroll"
+                        style="transition-delay: 200ms;">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 border-2 border-white">
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 border-2 border-white">
+                            </div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-emerald-400 border-2 border-white">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-amber-400">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                                <span class="text-5xl font-bold">46</span>
+                                <span class="text-2xl font-semibold">K</span>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                The most beautiful diving destinations in the world
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-100 rounded-3xl overflow-hidden h-[520px] relative animate-on-scroll"
+                        style="transition-delay: 300ms;">
+                        <div id="beach-carousel" class="w-full h-full relative overflow-hidden">
+                            <img id="beach-img"
+                                src="https://images.unsplash.com/photo-1672153919629-a9fc42869e58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxOdXNhJTIwUGVuaWRhJTIwYmVhY2h8ZW58MXx8fHwxNzYxMTM0MzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                alt="Nusa Penida Beach"
+                                class="w-full h-full object-cover transition-transform duration-500" />
+                        </div>
+                        <div class="absolute bottom-6 right-6 flex gap-2">
+                            <button id="beach-prev"
+                                class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m15 18-6-6 6-6" />
+                                </svg>
+                            </button>
+                            <button id="beach-next"
+                                class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            class="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-2 max-w-[200px]">
+                            <p class="text-sm" id="beach-caption">The most beautiful beaches on the island of Bali</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Semua section dan konten utama tetap -->
+
+        </div>
+        <footer class="bg-white border-t mt-12 py-8">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-gray-600">
+                <div class="mb-4 md:mb-0">
+                    &copy; 2025 Bali Island Travel. All rights reserved.
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-black transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-black transition">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+
+</html>
