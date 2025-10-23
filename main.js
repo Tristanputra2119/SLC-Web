@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Tutup mobile menu saat tombol di dalamnya diklik
     mobileMenu.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', () => {
             mobileMenu.style.opacity = '0';
@@ -101,18 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const heroDivider = document.getElementById('hero-divider');
         heroDivider.style.width = '100px';
         heroDivider.style.transition = 'width 1s cubic-bezier(0.4,0,0.2,1) 1.2s';
-        const scrollIndicator = document.getElementById('scroll-indicator');
-        scrollIndicator.style.opacity = 1;
-        scrollIndicator.style.transition = 'opacity 1s 2s';
         animateInView();
-    });
-
-    const mouseDot = document.getElementById('mouse-dot');
-    mouseDot.addEventListener('click', function () {
-        const nextSection = document.querySelector('section#hero + section');
-        if (nextSection) {
-            nextSection.scrollIntoView({ behavior: 'smooth' });
-        }
     });
 
     document.getElementById('current-year').textContent = new Date().getFullYear();

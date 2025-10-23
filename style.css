@@ -84,31 +84,20 @@ html {
     transition:
         background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
         backdrop-filter 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: transparent;
     backdrop-filter: none;
-}
-
-@keyframes bounce-indicator {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(16px);
-    }
-}
-
-#mouse-dot {
-    animation: bounce-indicator 1.2s infinite;
-    cursor: pointer;
+    box-shadow: none;
 }
 
 #mobile-menu {
     transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(-40px) scale(0.96);
+    -webkit-transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #mobile-menu.show {
@@ -120,6 +109,10 @@ html {
     opacity: 0;
     transform: translateX(-40px);
     transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-btn-anim.show {
