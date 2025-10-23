@@ -1,76 +1,128 @@
+:root {
+    --font-size: 16px;
+    --background: #0a0a0a;
+    --foreground: #ffffff;
+    --card: #141414;
+    --card-foreground: #ffffff;
+    --popover: #141414;
+    --popover-foreground: #ffffff;
+    --primary: #d4af37;
+    --primary-foreground: #0a0a0a;
+    --secondary: #1a1a1a;
+    --secondary-foreground: #ffffff;
+    --muted: #1f1f1f;
+    --muted-foreground: #a1a1a1;
+    --accent: #d4af37;
+    --accent-foreground: #0a0a0a;
+    --destructive: #d4183d;
+    --destructive-foreground: #ffffff;
+    --border: #2a2a2a;
+    --input: transparent;
+    --input-background: #1a1a1a;
+    --switch-background: #2a2a2a;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --ring: #d4af37;
+    --chart-1: #d4af37;
+    --chart-2: #9d8b4e;
+    --chart-3: #f5d061;
+    --chart-4: #c9a961;
+    --chart-5: #8b7355;
+    --radius: 0;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: #030213;
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+}
+
+body {
+    font-family: "Geist Sans", sans-serif;
+}
+
+[data-animate] {
+    opacity: 0;
+}
+
+[data-animate="fade-in-up"] {
+    transform: translateY(var(--start-y, 50px));
+}
+
+[data-animate="fade-in-left"] {
+    transform: translateX(var(--start-x, -50px));
+}
+
+[data-animate="fade-in-right"] {
+    transform: translateX(var(--start-x, 50px));
+}
+
+[data-animate="width-in"] {
+    opacity: 1;
+    width: 0;
+}
+
+:root {
+    --btn-hover-duration: 0.8s;
+}
+
+button,
+a,
+.group,
+.group * {
+    transition-duration: var(--btn-hover-duration) !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
 html {
-    scroll-behavior: smooth;
+    font-size: var(--font-size);
 }
 
-body,
-html {
-    font-family: 'Inter', Arial, sans-serif;
+#navbar {
+    transition:
+        background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        backdrop-filter 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    backdrop-filter: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.font-serif {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
+@keyframes bounce-indicator {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(16px);
+    }
 }
 
-.animate-on-scroll {
+#mouse-dot {
+    animation: bounce-indicator 1.2s infinite;
+    cursor: pointer;
+}
+
+#mobile-menu {
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-40px) scale(0.96);
+}
+
+#mobile-menu.show {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1);
+}
+
+.mobile-menu-btn-anim {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transform: translateX(-40px);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.animate-on-scroll.is-visible {
+.mobile-menu-btn-anim.show {
     opacity: 1;
-    transform: translateY(0);
-}
-
-.parallax-element,
-#visit-bg-parallax {
-    will-change: transform;
-}
-
-#mobile-nav {
-    transform: translateY(-30px);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.4s cubic-bezier(.4, 0, .2, 1), opacity 0.4s cubic-bezier(.4, 0, .2, 1);
-}
-
-#mobile-nav.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-}
-
-#beach-img.fade-out {
-    opacity: 0;
-}
-
-#beach-img.fade-in {
-    opacity: 1;
-}
-
-.search-modal {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-out;
-}
-
-.search-modal.is-visible {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.search-modal > div:last-child {
-    transform: translateY(-20px);
-    transition: transform 0.3s ease-out;
-}
-
-.search-modal.is-visible > div:last-child {
-    transform: translateY(0);
+    transform: translateX(0);
 }

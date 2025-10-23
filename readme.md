@@ -6,23 +6,22 @@ Website landing page modern untuk promosi wisata Bali, dibuat dengan HTML, Tailw
 
 - Responsive design (mobile & desktop)
 - Parallax background di section "Visit Bali Island"
-- Carousel gambar dengan animasi slide untuk "The most beautiful beaches on the island of Bali"
-- Navbar dengan hamburger menu dan animasi slide
-- Section About, Pricing, dan Contact dalam satu halaman
-- Animasi fade-in saat scroll
+- Animasi fade-in dan width-in saat scroll 
+- Section Destinations, Experiences, Culture, dan Contact dalam satu halaman
+- Font custom Geist Sans & Geist Mono dari CDN
+- smooth scroll ke section
 
 ## Cara Menjalankan
 
 1. Clone atau download repository ini.
 2. Buka file `index.html` di browser.
-3. Pastikan file `style.css` dan `main.js` berada di folder yang sama.
+3. Pastikan file `main.js` berada di folder yang sama.
 
 ## Struktur Folder
 
 ```
 SLC/
 ├── index.html
-├── style.css
 ├── main.js
 └── readme.md
 ```
@@ -31,3 +30,4 @@ SLC/
 
 - Gambar dari [Unsplash](https://unsplash.com/)
 - Framework CSS: [Tailwind CSS](https://tailwindcss.com/)
+- Font: [Geist Sans & Geist Mono](https://vercel.com/font/geist)
